@@ -28,3 +28,8 @@ print(d)
  for i in a:
     if i%3==0:
        print("Numarul {} este divizibil cu 3".format(i))
+
+      
+      
+#ex 5
+print(a[::2])
