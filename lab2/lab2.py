@@ -14,7 +14,9 @@ print(f)
 f=set(l)
 print(f)
 
-
+#ex2
+f1="#".join(l)
+print(f)
 #ex3
 
 l1=[1,2,3,4,5,6,7]
