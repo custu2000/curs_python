@@ -137,3 +137,9 @@ def get_most_frequent_v3(l):
 
 return sorted(d.keys(), key=lambda x: d[x], reverse=True)
 
+#ex 15
+a=['sdafljdsklfj','sdaljdksaklj','sdfakl jsdafkljl','uuuu']
+def count_a(s):
+  return s.count('a')
+
+map(count_a,a)
