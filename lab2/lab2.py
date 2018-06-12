@@ -24,8 +24,8 @@ d=zip(l1,l2)
 print(d)
 
 #ex 4
- a = [1, 3, 20, 1024, 53, 12, 102, 1, 4, 43, 32]
- for i in a:
+a = [1, 3, 20, 1024, 53, 12, 102, 1, 4, 43, 32]
+for i in a:
     if i%3==0:
        print("Numarul {} este divizibil cu 3".format(i))
 
@@ -33,3 +33,13 @@ print(d)
       
 #ex 5
 print(a[::2])
+
+#ex6
+
+cumparaturi={'tastatura':70,'mouse':50,'casti':100}
+cumparaturi2={}
+
+for key,value in cumparaturi.items():
+     cumparaturi2.update({key:value*1.19}) 
+
+print(cumparaturi2)
