@@ -53,10 +53,15 @@ data = sorted(data)
 
 for k,g in itertools.groupby(data):
    groups.update({k:len(list(g))})
-  
+
+   
+dic=dict(collections.Counter(data))
 
 #ex 8
 
 for i in range(2000,3000):
    if i % 5 ==0 and i %7 !=0:
        print i
+         
+         
+
