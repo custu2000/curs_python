@@ -66,9 +66,34 @@ for i in range(2000,3000):
        print i
  
 #ex 8. cu filter http://book.pythontips.com/en/latest/map_filter.html
+#lambda https://medium.com/@happymishra66/lambda-map-and-filter-in-python-4935f248593
+#https://www.linuxtopia.org/online_books/programming_books/python_programming/python_ch20s05.html
+#matrici
+#dictionar de dictionare
+#m3['hau88']={'new8': {'new88':{'new99':{'aici':88}}}}
 
 filter(lambda x : x % 5 == 0 and x % 7 !=0, range(2000,3000))
         
-      
-    
+#ex9
 
+def friend(list1,list2):
+     set1=set(list1)
+     set2=set(list2)
+     if len(set1.intersection(set2))>0:
+        return True
+     else:
+        return False
+b=[1, 2, 3, 4]
+c=[2, 3]
+friend(b,c)
+    
+#ex 9
+a=['sdafdsa', 'dfsafdas', 'sdfalkjkl']
+
+def max_size_word(list1):
+     return max(map(lambda x: len(x),list))
+max_size_word(a)
+#ex 10
+def filter_size_word(list1,n):
+     return  filter(lambda x: len(x)<n,list1)
+ 
