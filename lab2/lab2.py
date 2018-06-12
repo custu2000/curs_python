@@ -104,3 +104,36 @@ s=set(x.split(' '))
 
 for i in s:
   print i
+#ex 13
+
+def get_most_frequent_v1(l):
+    d = {}
+    s = set(l)
+    for i in s:
+        d[i] = l.count(i)
+
+    l = d.keys()
+    l.sort(key=lambda x: d[x], reverse=True)
+    return l
+
+print get_most_frequent_v1(l)
+
+
+def get_most_frequent_v2(l):
+    d = collections.Counter(l)
+    return sorted(d.keys(), key=lambda x: d[x], reverse=True)
+
+print get_most_frequent_v2(l)
+
+
+def get_most_frequent_v3(l):
+    d = {}
+
+    for elem in l:
+        try:
+            d[elem] += 1
+        except KeyError:
+            d[elem] = 1
+
+return sorted(d.keys(), key=lambda x: d[x], reverse=True)
+
