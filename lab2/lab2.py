@@ -97,3 +97,10 @@ max_size_word(a)
 def filter_size_word(list1,n):
      return  filter(lambda x: len(x)<n,list1)
  
+
+
+x = 'blue red green blue'
+s=set(x.split(' '))
+
+for i in s:
+  print i
