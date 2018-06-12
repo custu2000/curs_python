@@ -43,3 +43,14 @@ for key,value in cumparaturi.items():
      cumparaturi2.update({key:value*1.19}) 
 
 print(cumparaturi2)
+
+
+#ex7
+
+groups = {}
+data=['apple', 'banana', 'pear', 'apple', 'apple', 'banana', 'cherry', 'banana', 'apple']
+data = sorted(data)
+
+for k,g in itertools.groupby(data):
+   groups.update({k:len(list(g))})
+  
