@@ -64,6 +64,11 @@ dic=dict(collections.Counter(data))
 for i in range(2000,3000):
    if i % 5 ==0 and i %7 !=0:
        print i
-         
-         
+ 
+#ex 8. cu filter
+
+filter(lambda x : x % 5 == 0 and x % 7 !=0, range(2000,3000))
+        
+      
+    
 
