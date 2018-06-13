@@ -1,0 +1,35 @@
+
+s="""64 bytes from fra16s24-in-f4.1e100.net (216.58.207.36): icmp_seq=1 ttl=56 time=26.5 ms
+ 64 bytes from fra16s24-in-f4.1e100.net (216.58.207.36): icmp_seq=2 ttl=56 time=26.5 ms
+
+ --- www.google.com ping statistics ---
+44 packets transmitted, 2 received, 0% packet loss, time 1027ms
+rtt min/avg/max/mdev = 26.534/26.549/26.564/0.015 ms
+ """
+regex = r"(\d+) packets transmitted, (\d+) received, (\d+)% packet loss"
+regex1=r".* ttl=(\d+) .*"
+
+match=re.search(regex,s)
+
+print("Packets trasmited {}/Sent {}/Lost {}".format(match.group(1),match.group(2),match.group(3)))
+match=re.findall(regex,s)
+print("min ttl {}, max ttl {}".format(max(match),min(match)))
+
+#replace
+
+
+match=re.sub(regex,"xxx.xxx.xxx.xxx",s)
+regex=r"([\d]+\.?){4}"
+match=re.sub(regex,"xxx.xxx.xxx.xxx",s)
+
+
+print(s)
+#ex4
+s="testul asta este ceva interesant"
+regex=r"(\w+) "
+match=re.findall(regex,s)
+
+#ex5
+s="Hello( world)! -> Hello!"
+regex=r" world"
+match=re.sub(regex,"",s)
