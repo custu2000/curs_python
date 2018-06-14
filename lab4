@@ -1,0 +1,21 @@
+
+#ex 1
+class BankAccount(object):
+   def __init__(self,name,capital):
+        self.name=name
+        self.capital=capital
+   def __str__(self):
+        	return 'Banca: {}, Capital: {}'.format(self.name, self.capital)
+   def __repr__(self):
+        	return 'Banca: {}, Capital: {}'.format(self.name, self.capital)
+   def add(self,delta):
+          self.capital+=delta
+   def extract(self,delta):
+          if self.capital-delta>=0 : 
+               self.capital-=delta
+          else:
+               print "Fonduri insuficiente"
+
+
+
+b=BankAccount('ING',222)
