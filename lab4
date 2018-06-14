@@ -19,3 +19,22 @@ class BankAccount(object):
 
 
 b=BankAccount('ING',222)
+#ex 2
+class Employee(object):
+   def __init__(self,name,account,salary):
+        self.name=name
+        self.account=account
+        self.__salary=salary
+   def __str__(self):
+        	return 'Employee: {}, Cont: {}'.format(self.name, self.account)
+   def __repr__(self):
+        	return 'Employee: {}, Cont: {}'.format(self.name, self.account)
+   def getsalary(self):
+        pass
+   def receive_salary(self):
+        self.account+= self.__salary
+   def setsalary(self, salary):
+        self.__salary = salary
+   def delsalary(self):
+      pass
+   c = property(getsalary, setsalary, delsalary)
